@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+  greeting-app:
+    container_name: greeting
+    image: greeting:latest
+    ports:
+      - "8080:8080"
+
+  proxy:
+    build: proxy
+    ports:
+      - "80:80"
