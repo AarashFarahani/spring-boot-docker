@@ -4,10 +4,13 @@ services:
   greeting-app:
     container_name: greeting
     image: greeting:latest
+    build: .
     ports:
       - "8080:8080"
 
   proxy:
+    container_name: proxy
+    image: proxy:latest
     build: proxy
     ports:
       - "80:80"
