@@ -4,13 +4,20 @@ services:
   greeting:
     container_name: greeting
     image: greeting:latest
-    build: .
+    build: greeting
     ports:
       - "8080:8080"
+
+  person:
+    container_name: person
+    image: person:latest
+    build: person
+    ports:
+      - "8180:8180"
 
   proxy:
     container_name: proxy
     image: proxy:latest
     build: proxy
     ports:
-      - "8180:80"
+      - "8280:80"
