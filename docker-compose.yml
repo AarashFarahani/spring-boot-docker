@@ -1,7 +1,7 @@
 version: '3.3'
 
 services:
-  greeting-app:
+  greeting:
     container_name: greeting
     image: greeting:latest
     build: .
@@ -13,4 +13,4 @@ services:
     image: proxy:latest
     build: proxy
     ports:
-      - "80:80"
+      - "8180:80"
