@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class PersonController {
-    @RequestMapping("/person")
+    @RequestMapping("/person/getData")
     public Person greeting(@RequestParam(value="name", defaultValue="Arash") String name) {
         return new Person(name, "Farahani");
     }
